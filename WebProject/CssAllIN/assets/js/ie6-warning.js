@@ -7,12 +7,12 @@ function setCookie(name, value) {
 
 function getCookie(name) {
     if (name == '')
-        return('');
+        return ('');
 
     name_index = document.cookie.indexOf(name + '=');
 
     if (name_index == -1)
-        return('');
+        return ('');
 
     cookie_value = document.cookie.substr(name_index + name.length + 1, document.cookie.length);
 
@@ -27,13 +27,20 @@ function getCookie(name) {
         space = cookie_value.indexOf('+');
     }
 
-    return(cookie_value);
+    return (cookie_value);
 }
+var userAgent = navigator.userAgent.toLowerCase();
+var browserId = userAgent.match(/(firefox|chrome|safari|opera|msie)/)[1];
+var browserVersion = (userAgent.match(new RegExp('.+(?:version)[\/: ]([\\d.]+)')) || userAgent.match(new RegExp('(?:' + browserId + ')[\/: ]([\\d.]+)')) || [0, '0'])[1];
+var isIe6 = (browserId + browserVersion == "msie6.0");
+
 var isIE = !!window.ActiveXObject;
 if (isIE) {
     if (getCookie('warning_has_shown') != 'yes') {
         // your warning html url
+
         var warning_url = '/warring.html';
         location.href = warning_url + '?return=' + location.href;
+
     }
 }

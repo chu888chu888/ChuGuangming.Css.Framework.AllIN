@@ -1,64 +1,64 @@
-jQuery(document).ready(function($) {
-	
-// Select nav for smaller resolutions
-// Select menu for smaller screens
-$("<select />").appendTo("nav#primary");
+﻿jQuery(document).ready(function ($) {
 
-// Create default option "Menu"
-$("<option />", {
-   "selected": "selected",
-   "value"   : "",
-   "text"    : "Menu"
-}).appendTo("nav#primary select");
+    // Select nav for smaller resolutions
+    // Select menu for smaller screens
+    $("<select />").appendTo("nav#primary");
 
-// Populate dropdown with menu items
-$("nav#primary a").each(function() {
- var el = $(this);
- $("<option />", {
-     "value"   : el.attr("href"),
-     "text"    : el.text()
- }).appendTo("nav select");
-});
+    // Create default option "Menu"
+    $("<option />", {
+        "selected": "selected",
+        "value": "",
+        "text": "菜单"
+    }).appendTo("nav#primary select");
 
-$("nav#primary select").change(function() {
-  window.location = $(this).find("option:selected").val();
-});
+    // Populate dropdown with menu items
+    $("nav#primary a").each(function () {
+        var el = $(this);
+        $("<option />", {
+            "value": el.attr("href"),
+            "text": el.text()
+        }).appendTo("nav select");
+    });
 
-// Pretty Photo
-$("a[class^='prettyPhoto']").prettyPhoto();
+    $("nav#primary select").change(function () {
+        window.location = $(this).find("option:selected").val();
+    });
 
-// Tipsy
-$('.tooltip').tipsy({
-	gravity: $.fn.tipsy.autoNS,
-	fade: true,
-	html: true
-});
+    // Pretty Photo
+    $("a[class^='prettyPhoto']").prettyPhoto();
 
-$('.tooltip-s').tipsy({
-	gravity: 's',
-	fade: true,
-	html: true
-});
+    // Tipsy
+    $('.tooltip').tipsy({
+        gravity: $.fn.tipsy.autoNS,
+        fade: true,
+        html: true
+    });
 
-$('.tooltip-e').tipsy({
-	gravity: 'e',
-	fade: true,
-	html: true
-});
+    $('.tooltip-s').tipsy({
+        gravity: 's',
+        fade: true,
+        html: true
+    });
 
-$('.tooltip-w').tipsy({
-	gravity: 'w',
-	fade: true,
-	html: true
-});
+    $('.tooltip-e').tipsy({
+        gravity: 'e',
+        fade: true,
+        html: true
+    });
 
-// Scroll
-jQuery.localScroll();
+    $('.tooltip-w').tipsy({
+        gravity: 'w',
+        fade: true,
+        html: true
+    });
 
-// Prettyprint
-$('pre').addClass('prettyprint linenums');
+    // Scroll
+    jQuery.localScroll();
 
-// Uniform
-$("select, input:checkbox, input:radio, input:file").uniform();
-	
+    // Prettyprint
+    $('pre').addClass('prettyprint linenums');
+
+    // Uniform
+    $("select, input:checkbox, input:radio, input:file").uniform();
+
 });

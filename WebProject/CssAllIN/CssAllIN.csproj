@@ -131,6 +131,7 @@
     <Content Include="assets\fonts\Elusive-Icons.eot" />
     <Content Include="assets\fonts\Elusive-Icons.ttf" />
     <Content Include="assets\fonts\Elusive-Icons.woff" />
+    <Content Include="bak\Workless-master.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

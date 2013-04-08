@@ -21,17 +21,33 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="author" content="iKreativ 中文化修改 楚广明">
-    <meta name="description" content="AllIN - A classy HTML5, CSS3 framework">
-    <meta name="keywords" content="AllIN, classy, css, framework, jquery, bootstrap, h5bp, twitter, bolierplate, jquery, html5, ikreativ">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Workless - A classy HTML5, CSS3 framework">
+    <meta name="keywords" content="workless, classy, css, framework, jquery, bootstrap, h5bp, twitter, bolierplate, jquery, html5, ikreativ">
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <!-- 手机视图支持 -->
+    <!-- Mobile Viewport -->
     <meta name="viewport" content="width=device-width">
 
-    <title>Allin 是一个基于Html5 与 Css3的脚手架框架</title>
+    <title>Workless -Html5与CSS3简易框架</title>
+
+    <!-- 
+		You'll notice that we're loading all the CSS via a minification 
+        script. 
+
+		This script joins all the CSS files referenced and minifies them to
+		reduce HTTP requests and speed up the site.
+
+		This also allows you to work with each individual source file for 
+        development and only serve the minified versions for production.
+
+		The CSS files served are added inside assets/css/minified.css.php
+
+
+		Commented for minification script
+   -->
     <link href="assets/css/plugins.css" rel="stylesheet">
-    <link href="assets/css/AllIN.css" rel="stylesheet">
+    <link href="assets/css/workless.css" rel="stylesheet">
     <link href="assets/css/scaffolding.css" rel="stylesheet">
     <link href="assets/css/typography.css" rel="stylesheet">
     <link href="assets/css/forms.css" rel="stylesheet">
@@ -46,24 +62,23 @@
     <link href="assets/css/print.css" rel="stylesheet">
     <link href="assets/css/application.css" rel="stylesheet">
 
-    <!-- modernizr.js是用来检测CSS支持功能的 -->
-    <script type="text/javascript" src="assets/js/modernizr.js"></script>
-    <!-- 如果想要跳过IE支持，你可以强制用户不支持 -->
-    <script src="assets/js/ie6-warning.js"></script>
+
+
+
+
     <!--[if lt IE 8]>    
         <script src="assets/js/ie_font.js"></script>
     <![endif]-->
 </head>
-<!--blueish的样式在help.css中-->
-<body class="blueish">
 
-    <!-- 如果检测到IE6或者7那么提示用户更换浏览器 -->
+<body class="blueish" id="top" onload="prettyPrint()">
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6 -->
     <!--[if lt IE 7]>
-	<p>你的浏览器<em>太古老了!</em> <a href="http://browsehappy.com/">请升级你的浏览器</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     <![endif]-->
 
     <!-- wrapper -->
-    <!--boxed在application.css中，boxed是根据屏幕的大小自适应的-->
     <section class="boxed">
 
         <!-- main -->
@@ -72,9 +87,9 @@
             <!-- logo -->
             <div id="logo">
                 <a href="#">
-                    <img src="assets/img/logo.png" alt="AllIN" />
+                    <img src="assets/img/logo.png" alt="Workless" />
                 </a>
-                <small>AllIN是一个基于 HTML5, CSS3的框架</small>
+                <small>Workless一个简洁清爽的Html5框架</small>
             </div>
             <!-- /logo -->
 
@@ -97,13 +112,13 @@
 
             <!-- header -->
             <header class="bg_shadow">
-                <h1>AllIN中文经过修改之后，可以很好的支持各种设备与浏览器与中文，现在对WebKit的内核支持最好！</h1>
+                <h1>workless一个简洁清爽的Html5框架</h1>
 
                 <div id="getit">
-                    <h3>马上获取它!</h3>
+                    <h3>获取源程序</h3>
                     <ul class="nolist">
-                        <li><a class="alignleft large button blue" href="//github.com/iKreativ/AllIN"><i class="icon-inbox icon-white"></i>去GitHub得到源码</a></li>
-                        <li><a class="large button pink" href="//github.com/iKreativ/AllIN/zipball/master"><i class="icon-download-alt icon-white"></i>下载 .ZIP</a></li>
+                        <li><a class="alignleft large button blue" href="//github.com/iKreativ/Workless"><i class="icon-inbox icon-white"></i>Workless on GitHub</a></li>
+                        <li><a class="large button pink" href="//github.com/iKreativ/Workless/zipball/master"><i class="icon-download-alt icon-white"></i>Download .ZIP</a></li>
                     </ul>
 
                 </div>
@@ -111,37 +126,37 @@
             <!-- /header -->
 
             <div class="one_full">
-                <h2>AllIN是什么？</h2>
-                <p>AllIN是一个非常简单易用的CSS脚手架，Twitter Bootstrap 与 HTML5Boilerplate是非常好用的，相比之下它们又是复杂的. AllIN却非常简单</p>
-                <p>它可以很轻松的融入到你的项目中。使你的项目保持DRY原则</p>
+                <h2>What is it?</h2>
+                <p>Workless started out as a mashup of all the great things I liked about Twitter Bootstrap and HTML5Boilerplate. The more I worked with with it, the more I added in order to make life easier when working on any project.</p>
+                <p>It's now pretty much turned into a framework in it's own right, with all the stuff you need and none of the stuff you don't. It's about saving time and keeping your projects DRY.</p>
             </div>
 
             <hr>
 
             <div class="one_third">
-                <h2>它可以做什么？</h2>
-                <p>在Allin这个框架中将包含中文排版支持、表单、按钮、布局的支持</p>
-                <p>同时有一个Python Asp.net MVC PHP三个项目的案例</p>
+                <h2>What does it do?</h2>
+                <p>Standardizes CSS, improves usability and interaction, sets base typography to help vertical rhythm and readability and adds helper classes to style elements easily.</p>
+                <p>It can also combine and compress (requires PHP) CSS if you want it to!</p>
             </div>
 
             <div class="one_third">
-                <h2>谁在为它开发？</h2>
-                <p>开发者：楚广明</p>
-                <p>现在只有一个人在为它开发，楚广明一个IT老兵，以编码为乐趣。</p>
-                <p>前端爱好者。C#/Python/PHP语言开发者</p>
+                <h2>Who is it for?</h2>
+                <p>People like us.</p>
+                <p>People who build websites on a daily basis and get tired of writing the same code over and over for each project.</p>
+                <p>Start each project with Workless and save time by having all the defaults ready to go!</p>
             </div>
 
             <div class="one_third last">
-                <h2>我们如何使用？</h2>
-                <p>你可以通过网站样例使用它</p>
-                <p>一切都非常简单</p>
+                <h2>How do I use it?</h2>
+                <p>Either start with the base setup, or drop the files and assets into your current project and simply reference the CSS and Javascript files in your source.</p>
+                <p>Once you've done this you can then begin adding your own application specific CSS.</p>
             </div>
 
             <hr>
 
             <!-- footer -->
             <footer class="one_full">
-                <p class="small muted">开发者楚广明 新浪微博 @疯狂制造 GitHub:chu888chu888</p>
+                <p class="small muted">A project by <a href="//ikreativ.com">Scott Parry</a> (<a href="//twitter.com/iKreativ">@iKreativ</a>). Originally based off <a href="//html5boilerplate.com/">H5BP</a> and <a href="//twitter.github.com/bootstrap/">Bootstrap</a>. Released under the <a href="//philsturgeon.co.uk/code/dbad-license/">DBAD License</a>.</p>
             </footer>
             <!-- /footer -->
 
@@ -151,12 +166,17 @@
     </section>
     <!-- /wrapper -->
 
-    <!-- JavaScript at the bottom for fast page loading -->
+    <!-- JavaScript 放在最后会加快载入速度-->
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <!-- 首先通过SAE CDN加入Jquery的版本，如果加载失败那么就加载本地的 -->
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/jquery-1.9.1.min.js"><\/script>')</script>
 
+    <!-- scripts  -->
+    <script src="assets/js/plugins.js"></script>
+    <!--通过application.js动态加入下拉菜单-->
+    <script src="assets/js/application.js"></script>
+    <!-- /scripts -->
 
 
 
