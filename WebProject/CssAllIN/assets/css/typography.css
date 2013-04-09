@@ -1,9 +1,10 @@
-/**
+﻿/**
  * Typography
  */
 
 * { 
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu ;
 	font-weight: normal;
 	line-height: 1.231; 
 	text-rendering: optimizeLegibility; 

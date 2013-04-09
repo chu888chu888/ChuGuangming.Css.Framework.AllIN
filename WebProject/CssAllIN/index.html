@@ -31,22 +31,8 @@
 
     <title>Workless -Html5与CSS3简易框架</title>
 
-    <!-- 
-		You'll notice that we're loading all the CSS via a minification 
-        script. 
-
-		This script joins all the CSS files referenced and minifies them to
-		reduce HTTP requests and speed up the site.
-
-		This also allows you to work with each individual source file for 
-        development and only serve the minified versions for production.
-
-		The CSS files served are added inside assets/css/minified.css.php
 
 
-		Commented for minification script
-   -->
-    <link href="assets/css/plugins.css" rel="stylesheet">
     <link href="assets/css/workless.css" rel="stylesheet">
     <link href="assets/css/scaffolding.css" rel="stylesheet">
     <link href="assets/css/typography.css" rel="stylesheet">
@@ -57,21 +43,18 @@
     <link href="assets/css/tabs.css" rel="stylesheet">
     <link href="assets/css/pagination.css" rel="stylesheet">
     <link href="assets/css/breadcrumbs.css" rel="stylesheet">
-    <link href="assets/css/icons.css" rel="stylesheet">
+
     <link href="assets/css/helpers.css" rel="stylesheet">
     <link href="assets/css/print.css" rel="stylesheet">
     <link href="assets/css/application.css" rel="stylesheet">
 
-
-
-
-
     <!--[if lt IE 8]>    
         <script src="assets/js/ie_font.js"></script>
     <![endif]-->
+    <script src="assets/js/ie6-warning.js"></script>
 </head>
 
-<body class="blueish" id="top" onload="prettyPrint()">
+<body class="blueish" id="top">
 
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6 -->
     <!--[if lt IE 7]>
@@ -96,6 +79,7 @@
             <!-- nav -->
             <nav id="primary">
                 <ul>
+                    <li><a href="scaffold.html">首页</a></li>
                     <li><a href="scaffold.html">脚手架</a></li>
                     <li><a href="forms.html">表单</a></li>
                     <li><a href="tables.html">表格</a></li>
@@ -173,7 +157,7 @@
     <script>window.jQuery || document.write('<script src="assets/js/jquery-1.9.1.min.js"><\/script>')</script>
 
     <!-- scripts  -->
-<!--    <script src="assets/js/plugins.js"></script>-->
+    <!--    <script src="assets/js/plugins.js"></script>-->
     <!--通过application.js动态加入下拉菜单-->
     <script src="assets/js/application.js"></script>
     <!-- /scripts -->

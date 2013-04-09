@@ -384,6 +384,37 @@
     <Content Include="assets\js\jquery.js" />
     <Content Include="assets\js\modernizr.js" />
     <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\UniForm\css\blue.uni-form.css" />
+    <Content Include="assets\UniForm\css\dark.uni-form.css" />
+    <Content Include="assets\UniForm\css\default.uni-form.css" />
+    <Content Include="assets\UniForm\css\ready.uni-form.css" />
+    <Content Include="assets\UniForm\css\uni-form.css" />
+    <Content Include="assets\UniForm\demos\callback.html" />
+    <Content Include="assets\UniForm\demos\checkboxes.html" />
+    <Content Include="assets\UniForm\demos\css\demo.css" />
+    <Content Include="assets\UniForm\demos\fauxform.html" />
+    <Content Include="assets\UniForm\demos\fauxform_readonly.html" />
+    <Content Include="assets\UniForm\demos\localization.html" />
+    <Content Include="assets\UniForm\demos\validation.html" />
+    <Content Include="assets\UniForm\img\ok.png" />
+    <Content Include="assets\UniForm\img\uni-form-logo.png" />
+    <Content Include="assets\UniForm\js\jquery-1.9.0.min.js" />
+    <Content Include="assets\UniForm\js\uni-form-validation.jquery.js" />
+    <Content Include="assets\UniForm\js\uni-form-validation.jquery.min.js" />
+    <Content Include="assets\UniForm\js\uni-form.jquery.js" />
+    <Content Include="assets\UniForm\js\uni-form.jquery.min.js" />
+    <Content Include="assets\UniForm\localization\da.js" />
+    <Content Include="assets\UniForm\localization\de.js" />
+    <Content Include="assets\UniForm\localization\es.js" />
+    <Content Include="assets\UniForm\localization\fi.js" />
+    <Content Include="assets\UniForm\localization\fr.js" />
+    <Content Include="assets\UniForm\localization\it.js" />
+    <Content Include="assets\UniForm\localization\nl.js" />
+    <Content Include="assets\UniForm\localization\tr.js" />
+    <Content Include="assets\UniForm\test\form.js" />
+    <Content Include="assets\UniForm\test\index.html" />
+    <Content Include="assets\UniForm\test\issues.js" />
+    <Content Include="assets\UniForm\test\validation.js" />
     <Content Include="buttons.html" />
     <Content Include="crossdomain.xml" />
     <Content Include="forms.html" />
@@ -391,8 +422,6 @@
     <Content Include="humans.txt" />
     <Content Include="icons.html" />
     <Content Include="index.html" />
-    <Content Include="license.txt" />
-    <Content Include="plugins.html" />
     <Content Include="scaffold.html" />
     <Content Include="tables.html" />
     <Content Include="typography.html" />
@@ -414,6 +443,9 @@
     <Content Include="assets\elusiveicon\font\Elusive-Icons.woff" />
     <Content Include="assets\elusiveicon\less\elusive-webfont.less" />
     <Content Include="assets\elusiveicon\README.md" />
+    <Content Include="assets\UniForm\.gitignore" />
+    <Content Include="assets\UniForm\README.md" />
+    <Content Include="assets\UniForm\VALIDATION.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

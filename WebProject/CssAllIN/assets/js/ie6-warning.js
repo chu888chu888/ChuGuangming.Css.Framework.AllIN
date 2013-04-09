@@ -36,6 +36,9 @@ var isIe6 = (browserId + browserVersion == "msie6.0");
 
 var isIE = !!window.ActiveXObject;
 if (isIE) {
+    //var warning_url = '/warring.html';
+    //location.href = warning_url + '?return=' + location.href;
+
     if (getCookie('warning_has_shown') != 'yes') {
         // your warning html url
 

@@ -226,9 +226,9 @@ Automatically formatted &lt;pre&gt; tags
 
     <!-- JavaScript at the bottom for fast page loading -->
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>')</script>
+    <!-- 首先通过SAE CDN加入Jquery的版本，如果加载失败那么就加载本地的 -->
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.9.1.min.js"><\/script>')</script>
 
     <!-- scripts  -->
    <!-- <script src="assets/js/plugins.js"></script>-->
