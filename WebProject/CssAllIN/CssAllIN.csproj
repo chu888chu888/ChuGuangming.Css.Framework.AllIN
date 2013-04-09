@@ -378,8 +378,10 @@
     <Content Include="assets\img\tipsy.gif" />
     <Content Include="assets\img\workless.jpg" />
     <Content Include="assets\js\application.js" />
+    <Content Include="assets\js\forms.js" />
     <Content Include="assets\js\ie6-warning.js" />
     <Content Include="assets\js\ie_font.js" />
+    <Content Include="assets\js\jquery-1.7.2.min.js" />
     <Content Include="assets\js\jquery-1.9.1.min.js" />
     <Content Include="assets\js\jquery.js" />
     <Content Include="assets\js\modernizr.js" />
@@ -418,6 +420,7 @@
     <Content Include="buttons.html" />
     <Content Include="crossdomain.xml" />
     <Content Include="forms.html" />
+    <Content Include="forms2.html" />
     <Content Include="helpers.html" />
     <Content Include="humans.txt" />
     <Content Include="icons.html" />

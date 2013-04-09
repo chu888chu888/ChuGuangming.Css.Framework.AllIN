@@ -1,0 +1,195 @@
+﻿<!doctype html>
+
+<!--[if lt IE 7]> 
+	<html class="nojs ms lt_ie7" lang="en"> 
+<![endif]-->
+
+<!--[if IE 7]>    
+	<html class="nojs ms ie7" lang="en"> 
+<![endif]-->
+
+<!--[if IE 8]>    
+	<html class="nojs ms ie8" lang="en"> 
+<![endif]-->
+
+<!--[if gt IE 8]> 
+	<html class="nojs ms" lang="en"> 
+<![endif]-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Workless - A classy HTML5, CSS3 framework">
+    <meta name="keywords" content="workless, classy, css, framework, jquery, bootstrap, h5bp, twitter, bolierplate, jquery, html5, ikreativ">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Mobile Viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <title>Workless 基于Html5与CSS3的简洁框架</title>
+
+    <link href="assets/css/plugins.css" rel="stylesheet">
+    <link href="assets/css/workless.css" rel="stylesheet">
+    <link href="assets/css/scaffolding.css" rel="stylesheet">
+    <link href="assets/css/typography.css" rel="stylesheet">
+    <link href="assets/css/forms.css" rel="stylesheet">
+    <link href="assets/css/tables.css" rel="stylesheet">
+    <link href="assets/css/buttons.css" rel="stylesheet">
+    <link href="assets/css/alerts.css" rel="stylesheet">
+    <link href="assets/css/tabs.css" rel="stylesheet">
+    <link href="assets/css/pagination.css" rel="stylesheet">
+    <link href="assets/css/breadcrumbs.css" rel="stylesheet">
+    <link href="assets/css/icons.css" rel="stylesheet">
+    <link href="assets/css/helpers.css" rel="stylesheet">
+    <link href="assets/css/print.css" rel="stylesheet">
+    <link href="assets/css/application.css" rel="stylesheet">
+
+    <!--[if lt IE 8]>    
+        <script src="assets/js/ie_font.js"></script>
+    <![endif]-->
+
+
+    <link href="assets/UniForm/css/uni-form.css" rel="stylesheet" />
+    <link href="assets/UniForm/css/default.uni-form.css" rel="stylesheet" />
+    <!-- <link href="assets/UniForm/demos/css/demo.css" rel="stylesheet" />-->
+
+    <!--[if lte ie 7]>
+      <style type="text/css" media="screen">
+        /* Move these to your IE6/7 specific stylesheet if possible */
+        .uniForm, .uniForm fieldset, .uniForm .ctrlHolder, .uniForm .formHint, .uniForm .buttonHolder, .uniForm .ctrlHolder ul{ zoom:1; }
+      </style>
+    <![endif]-->
+</head>
+
+<body class="blueish" id="top" onload="prettyPrint()">
+
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6 -->
+    <!--[if lt IE 7]>
+	<p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+<![endif]-->
+
+    <!-- wrapper -->
+    <section class="boxed">
+
+        <!-- main -->
+        <section id="main">
+
+            <!-- logo -->
+            <div id="logo">
+                <a href="#">
+                    <img src="assets/img/logo.png" alt="Workless" />
+                </a>
+                <small>Workless一个简洁清爽的Html5框架</small>
+            </div>
+            <!-- /logo -->
+
+            <!-- nav -->
+            <nav id="primary">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="forms.html">表单1</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="icons.html">图标</a></li>
+                    <li><a href="helpers.html">帮助</a></li>
+                    <li><a href="plugins.html">插件</a></li>
+                </ul>
+            </nav>
+            <!-- /nav -->
+
+            <hr>
+
+            <!-- header -->
+            <header class="bg_shadow">
+                <h1>UniForm表单演示</h1>
+            </header>
+            <!-- /header -->
+            <p />
+
+
+            <form action="#" class="uniForm">
+                <h3>客户端验证</h3>
+
+                <div class="ctrlHolder">
+                    <label for=""><em>*</em> 自定义验证</label>
+                    <input name="name" id="name" data-default-value="输入数据" size="35" maxlength="50" type="text" class="textInput required validateCallback my_code_callback" />
+                    <p class="formHint">输入两个字符比如: A4, B8, C2</p>
+                </div>
+
+                <div class="ctrlHolder">
+                    <label for=""><em>*</em> 你的邮件地址</label>
+                    <input name="email" id="email" data-default-value="输入正确的邮箱" size="35" maxlength="50" type="text" class="textInput validateEmail" />
+                    <p class="formHint">正确的邮箱</p>
+                </div>
+
+                <div class="ctrlHolder">
+                    <h4>法律协议</h4>
+                    <ul class="blockLabels">
+                        <li>
+                            <label for="">
+                                <input type="checkbox" name="agreement" class="required">
+                                我同意</label></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="buttonHolder">
+                    <button type="button" id="btnback" class="button green">返回</button>
+                    <button type="submit" id="btnSubmit" disabled="disabled" class="button red">提交</button>
+                </div>
+
+            </form>
+
+            <hr>
+
+            <!-- footer -->
+            <footer class="one_full">
+                <p class="small muted">A project by <a href="//ikreativ.com">Scott Parry</a> (<a href="//twitter.com/iKreativ">@iKreativ</a>). Originally based off <a href="//html5boilerplate.com/">H5BP</a> and <a href="//twitter.github.com/bootstrap/">Bootstrap</a>. Released under the <a href="//philsturgeon.co.uk/code/dbad-license/">DBAD License</a>.</p>
+            </footer>
+            <!-- /footer -->
+
+        </section>
+        <!-- /main -->
+
+    </section>
+    <!-- /wrapper -->
+
+    <script src="assets/js/jquery-1.7.2.min.js"></script>
+    <!-- scripts  -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/application.js"></script>
+    <!-- /scripts -->
+
+    <script src="assets/UniForm/js/uni-form-validation.jquery.js"></script>
+    <script>
+        $(function () {
+            $('form.uniForm').uniform();
+
+        });
+        window.my_code_callback = function (field, caption) {
+            if (2 != field.val().length) {
+                return caption + ' 必须两个字符';
+            }
+
+            if (/^[a-zA-Z]/.test(field.val())
+                && /[0-9]$/.test(field.val())
+            ) {
+                $("#btnback").attr('disabled', true);//设置disabled属性为false，按钮可用
+                $("#btnSubmit").attr('disabled', true);//设置disabled属性为true，按钮不可用 
+                $("#btnSubmit").removeAttr("disabled"); //返回结果时按钮可用，再次提交。
+                return true;
+
+            }
+            return caption + ' 必须是字符加数字';
+        }
+    </script>
+
+
+</body>
+</html>
