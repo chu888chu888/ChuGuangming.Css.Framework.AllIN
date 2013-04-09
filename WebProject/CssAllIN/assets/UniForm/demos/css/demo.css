@@ -28,7 +28,14 @@ h1, h2, h3, ul, ol, p {
     margin: 1.5em 0;
 }
 
+h1 {
+    margin: 42px auto 28px auto;
+    width: 284px;
+}
 
+h2 {
+    font-size: 1.25em;
+}
 
 .uniForm h2 {
     margin: 1em 0 1em 1.15em;
@@ -44,7 +51,7 @@ fieldset h3 {
 
 .uniForm {
     width: 55%;
-    /*background: #fff;*/
+    background: #fff;
     margin: 28px auto;
     padding: 28px;
     /* CSS3 */
