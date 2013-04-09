@@ -72,6 +72,7 @@
     <Content Include="assets\css\scaffolding.css" />
     <Content Include="assets\css\tables.css" />
     <Content Include="assets\css\tabs.css" />
+    <Content Include="assets\css\typo.css" />
     <Content Include="assets\css\typography.css" />
     <Content Include="assets\css\workless.css" />
     <Content Include="assets\elusiveicon\css\elusive-webfont-ie7.css" />
@@ -425,6 +426,7 @@
     <Content Include="humans.txt" />
     <Content Include="icons.html" />
     <Content Include="index.html" />
+    <Content Include="plugin.html" />
     <Content Include="scaffold.html" />
     <Content Include="tables.html" />
     <Content Include="typography.html" />
@@ -449,12 +451,16 @@
     <Content Include="assets\UniForm\.gitignore" />
     <Content Include="assets\UniForm\README.md" />
     <Content Include="assets\UniForm\VALIDATION.md" />
+    <Content Include="bak\jQuery-menu-aim-master.zip" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\menu\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
