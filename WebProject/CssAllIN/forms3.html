@@ -121,42 +121,53 @@
 
             <!-- header -->
             <header class="bg_shadow">
-                <h1>UniForm表单演示</h1>
+                <h1>UniForm多选按钮演示</h1>
             </header>
             <!-- /header -->
             <p />
 
 
             <form action="#" class="uniForm">
-                <h3>客户端验证</h3>
 
-                <div class="ctrlHolder">
-                    <label for=""><em>*</em> 自定义验证</label>
-                    <input name="name" id="name" data-default-value="输入数据" size="35" maxlength="50" type="text" class="textInput required validateCallback my_code_callback" />
-                    <p class="formHint">输入两个字符比如: A4, B8, C2</p>
-                </div>
+                <fieldset>
+                    <h3>多选按钮回调演示</h3>
 
-                <div class="ctrlHolder">
-                    <label for=""><em>*</em> 你的邮件地址</label>
-                    <input name="email" id="email" data-default-value="输入正确的邮箱" size="35" maxlength="50" type="text" class="textInput validateEmail" />
-                    <p class="formHint">正确的邮箱</p>
-                </div>
+                    <div class="ctrlHolder" id="color_select">
+                        <h3>您喜欢的颜色</h3>
+                        <ul>
+                            <li>
+                                <label for="color_1">
+                                    <input type="checkbox" name="color[]" id="color_1" class="color_selection" value="blue">
+                                    blue</label></li>
+                            <li>
+                                <label for="color_2">
+                                    <input type="checkbox" name="color[]" id="color_2" class="color_selection" value="red">
+                                    red</label></li>
+                            <li>
+                                <label for="color_3">
+                                    <input type="checkbox" name="color[]" id="color_3" class="color_selection" value="purple">
+                                    purple</label></li>
+                            <li>
+                                <label for="color_4">
+                                    <input type="checkbox" name="color[]" id="color_4" class="color_selection" value="brown">
+                                    brown</label></li>
+                            <li>
+                                <label for="color_5">
+                                    <input type="checkbox" name="color[]" id="color_5" class="color_selection" value="pink">
+                                    pink</label></li>
+                            <li>
+                                <label for="color_6">
+                                    <input type="checkbox" name="color[]" id="color_6" class="color_selection" value="navy">
+                                    navy</label></li>
+                        </ul>
+                        <p class="formHint">请选择二个或二个以上.</p>
+                    </div>
 
-                <div class="ctrlHolder">
-                    <h4>法律协议</h4>
-                    <ul class="blockLabels">
-                        <li>
-                            <label for="">
-                                <input type="checkbox" name="agreement" class="required">
-                                我同意</label></li>
-                    </ul>
-                </div>
-
-
+                </fieldset>
 
                 <div class="buttonHolder">
-                    <button type="button" id="btnback" class="button green">返回</button>
-                    <button type="submit" id="btnSubmit" disabled="disabled" class="button red">提交</button>
+                    <button type="submit" class="secondaryAction">← 返回</button>
+                    <button type="submit" class="primaryAction">提交</button>
                 </div>
 
             </form>
@@ -180,29 +191,35 @@
     <script src="assets/UniForm/js/uni-form.jquery.js"></script>
 
     <!-- /scripts -->
-    
+
     <script src="assets/UniForm/js/uni-form-validation.jquery.js"></script>
-    <script>
-        $(function () {
-            $('form.uniForm').uniform();
+    <script type="text/javascript">
+        /**
+         * Check that at least two checkboxes have been selected
+         *
+         * @param object form jQuery object of the form
+         *
+         * return false on error
+         */
+        my_submit_callback = function (form) {
 
-        });
-        window.my_code_callback = function (field, caption) {
-            if (2 != field.val().length) {
-                return caption + ' 必须两个字符';
+            // Are at least two selectd?
+            if ($('input.color_selection:checked').length < 2) {
+                // show the error
+                $('#color_select').addClass('error');
+                return false;
             }
-
-            if (/^[a-zA-Z]/.test(field.val())
-                && /[0-9]$/.test(field.val())
-            ) {
-                $("#btnback").attr('disabled', true);//设置disabled属性为false，按钮可用
-                $("#btnSubmit").attr('disabled', true);//设置disabled属性为true，按钮不可用 
-                $("#btnSubmit").removeAttr("disabled"); //返回结果时按钮可用，再次提交。
-                return true;
-
-            }
-            return caption + ' 必须是字符加数字';
+            $('#color_select').removeClass('error');
+            return true;
         }
+
+        $(function () {
+            $('form.uniForm').uniform({
+                prevent_submit: true,
+                submit_callback: my_submit_callback
+            });
+        });
+
     </script>
         <!-- scripts  -->
     <script src="assets/js/plugins.js"></script>

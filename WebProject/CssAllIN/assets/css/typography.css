@@ -47,25 +47,7 @@ strong
 	color: inherit;
 	font-weight: bold; 
 }
-blockquote
-{ 
-	font-size: 24px; 
-	font-weight: 100; 
-	line-height: 28px; 
-	padding: 15px 0 0 75px;
-	margin: 15px 0 25px 0;
-	float: left; 
-}
-blockquote:before 
-{ 
-	content: '\201C'; 
-	font-size: 128px; 
-	font-weight: 200;
-	color: #dddddd;
-	margin-left: -25px;
-	margin-bottom: 10px;
-	position: absolute; 
-}
+
 span.fancyamp
 {
 	font-family: Baskerville, Palatino, "Book Antiqua", serif;

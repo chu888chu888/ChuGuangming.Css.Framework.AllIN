@@ -387,6 +387,7 @@
     <Content Include="assets\js\jquery.js" />
     <Content Include="assets\js\modernizr.js" />
     <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\prettys.js" />
     <Content Include="assets\UniForm\css\blue.uni-form.css" />
     <Content Include="assets\UniForm\css\dark.uni-form.css" />
     <Content Include="assets\UniForm\css\default.uni-form.css" />
@@ -406,6 +407,7 @@
     <Content Include="assets\UniForm\js\uni-form-validation.jquery.min.js" />
     <Content Include="assets\UniForm\js\uni-form.jquery.js" />
     <Content Include="assets\UniForm\js\uni-form.jquery.min.js" />
+    <Content Include="assets\UniForm\localization\cn.js" />
     <Content Include="assets\UniForm\localization\da.js" />
     <Content Include="assets\UniForm\localization\de.js" />
     <Content Include="assets\UniForm\localization\es.js" />
@@ -419,9 +421,13 @@
     <Content Include="assets\UniForm\test\issues.js" />
     <Content Include="assets\UniForm\test\validation.js" />
     <Content Include="buttons.html" />
-    <Content Include="crossdomain.xml" />
+    <Content Include="chinesetypo.html" />
+    <Content Include="forms3.html" />
     <Content Include="forms.html" />
     <Content Include="forms2.html" />
+    <Content Include="forms4.html" />
+    <Content Include="forms5.html" />
+    <Content Include="forms6.html" />
     <Content Include="helpers.html" />
     <Content Include="humans.txt" />
     <Content Include="icons.html" />

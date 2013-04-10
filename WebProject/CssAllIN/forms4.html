@@ -53,7 +53,7 @@
 
 
     <link href="assets/UniForm/css/uni-form.css" rel="stylesheet" />
-    <link href="assets/UniForm/css/default.uni-form.css" rel="stylesheet" />
+    <link href="assets/UniForm/css/default.uni-form.css" id="formStyle" rel="stylesheet" />
     <!-- <link href="assets/UniForm/demos/css/demo.css" rel="stylesheet" />-->
 
     <!--[if lte ie 7]>
@@ -64,7 +64,7 @@
     <![endif]-->
     <style type="text/css">
         .uniForm {
-            width: 55%;
+            width: 65%;
             background: #fff;
             margin: 28px auto;
             padding: 28px;
@@ -75,6 +75,39 @@
             -o-border-radius: 12px;
             -khtml-border-radius: 12px;
         }
+
+        .browse {
+            margin: 0;
+            position: fixed;
+            top: 130px;
+            right: 50px;
+            width: 84px;
+            padding: 28px 28px 14px 28px;
+            font-size: 12px;
+            background: #97a2b0;
+            /* CSS3 */
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -o-border-radius: 12px;
+            -khtml-border-radius: 12px;
+        }
+
+            .browse h2 {
+                font-size: 12px;
+                margin: 0 0 14px 0;
+            }
+
+            .browse ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .browse li {
+                margin: 0 0 14px 0;
+                padding: 0;
+                list-style: none;
+            }
     </style>
 </head>
 
@@ -121,45 +154,75 @@
 
             <!-- header -->
             <header class="bg_shadow">
-                <h1>UniForm表单演示</h1>
+                <h1>UniForm完整样式选择</h1>
             </header>
             <!-- /header -->
             <p />
 
 
             <form action="#" class="uniForm">
-                <h3>客户端验证</h3>
 
-                <div class="ctrlHolder">
-                    <label for=""><em>*</em> 自定义验证</label>
-                    <input name="name" id="name" data-default-value="输入数据" size="35" maxlength="50" type="text" class="textInput required validateCallback my_code_callback" />
-                    <p class="formHint">输入两个字符比如: A4, B8, C2</p>
+                <div class="header">
+                    <h2>默认样式</h2>
                 </div>
 
-                <div class="ctrlHolder">
-                    <label for=""><em>*</em> 你的邮件地址</label>
-                    <input name="email" id="email" data-default-value="输入正确的邮箱" size="35" maxlength="50" type="text" class="textInput validateEmail" />
-                    <p class="formHint">正确的邮箱</p>
+                <div id="errorMsg">
+                    <h3>错误信息</h3>
+                    <ol>
+                        <li>错误一</li>
+                        <li>错误二</li>
+                    </ol>
                 </div>
 
-                <div class="ctrlHolder">
-                    <h4>法律协议</h4>
-                    <ul class="blockLabels">
-                        <li>
-                            <label for="">
-                                <input type="checkbox" name="agreement" class="required">
-                                我同意</label></li>
-                    </ul>
+                <div id="okMsg">
+                    <p>
+                        一切验证通过!
+                    </p>
                 </div>
 
+                <fieldset>
+                    <h3>默认保单布局</h3>
 
+                    <div class="ctrlHolder">
+                        <label for=""><em>*</em> 文本输入最大50</label>
+                        <input name="" id="" data-default-value="Placeholder text" size="35" maxlength="50" type="text" class="textInput small" />
+                        <p class="formHint">提示消息</p>
+                    </div>
+
+                    <div class="ctrlHolder error" id="error1">
+                        <label for=""><em>*</em> 文本输入最大50</label>
+                        <input name="" id="Text1" value="Invalid value" size="35" maxlength="50" type="text" class="textInput medium error" />
+                        <p class="formHint">提示信息</p>
+                    </div>
+
+                    <div class="ctrlHolder">
+                        <label for=""><em>*</em>大文本输入</label>
+                        <input name="" id="Text2" data-default-value="Placeholder text" size="35" maxlength="50" type="text" class="textInput large" />
+                        <p class="formHint">文本样式</p>
+                    </div>
+
+
+
+                </fieldset>
 
                 <div class="buttonHolder">
-                    <button type="button" id="btnback" class="button green">返回</button>
-                    <button type="submit" id="btnSubmit" disabled="disabled" class="button red">提交</button>
+                    <button type="submit" class="secondaryAction">← 返回</button>
+                    <button type="submit" class="primaryAction">提交信息</button>
                 </div>
 
             </form>
+
+            <div class="browse">
+                <h2>动态修改样式</h2>
+                <ul>
+                    <li><a style="color: red" href="#" rel="assets/UniForm/css/default.uni-form.css">Default</a>
+                    </li>
+                    <li><a style="color: red" href="#" rel="assets/UniForm/css/blue.uni-form.css">Blue</a>
+                    </li>
+                    <li><a style="color: red" href="#" rel="assets/UniForm/css/dark.uni-form.css">Dark</a>
+                    </li>
+                </ul>
+            </div>
 
             <hr>
 
@@ -180,31 +243,24 @@
     <script src="assets/UniForm/js/uni-form.jquery.js"></script>
 
     <!-- /scripts -->
-    
+
     <script src="assets/UniForm/js/uni-form-validation.jquery.js"></script>
-    <script>
+    <script type="text/javascript">
         $(function () {
+
+            // init Uni-Form
             $('form.uniForm').uniform();
 
+            // specific for this page
+            $(".browse a").click(function (e) {
+
+                e.preventDefault();
+                $("#formStyle").attr("href", $(this).attr('rel'));
+                return false;
+            });
         });
-        window.my_code_callback = function (field, caption) {
-            if (2 != field.val().length) {
-                return caption + ' 必须两个字符';
-            }
-
-            if (/^[a-zA-Z]/.test(field.val())
-                && /[0-9]$/.test(field.val())
-            ) {
-                $("#btnback").attr('disabled', true);//设置disabled属性为false，按钮可用
-                $("#btnSubmit").attr('disabled', true);//设置disabled属性为true，按钮不可用 
-                $("#btnSubmit").removeAttr("disabled"); //返回结果时按钮可用，再次提交。
-                return true;
-
-            }
-            return caption + ' 必须是字符加数字';
-        }
     </script>
-        <!-- scripts  -->
+    <!-- scripts  -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/application.js"></script>
 

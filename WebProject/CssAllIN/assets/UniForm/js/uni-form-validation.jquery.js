@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Uni-Form jQuery Plugin with Validation
  *
  * Provides form actions for use with the Uni-Form markup style
@@ -55,6 +55,8 @@ jQuery.fn.uniform = function (extended_settings) {
      *
      * @var object
      */
+
+
     var i18n_strings = jQuery.fn.uniform.language;
 
     /**
